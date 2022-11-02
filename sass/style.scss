@@ -168,6 +168,7 @@ header {
     font-family: $font-header;
     color: $color-one;
     font-weight: 600;
+    position: relative;
     i {
         background-color: $color-one;
         color: $color-two;
@@ -180,5 +181,22 @@ header {
         justify-content: center;
         margin-left: 2px;
         margin-right: 2px;
+        transition: outline 0.2s;
+        &:hover {
+            outline: 4px solid rgba($color-one, 0.15)
+        }
+    }
+}
+
+.social-icons{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @media (max-width: 991px) {
+        position: static;
+        transform: none;
+        width: 100%;
+        text-align: center;
     }
 }
