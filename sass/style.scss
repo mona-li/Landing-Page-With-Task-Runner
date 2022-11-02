@@ -1,0 +1,184 @@
+$color-one: #000;
+$color-two: #fff;
+$color-three: #fed136;
+$color-four: #777;
+$color-five: #eee;
+
+$font-header: 'Catamaran', sans-serif;
+$font-content: 'Playfair Display', serif;
+
+$header-height: 110px;
+$home-height: 70vh;
+
+/* general */
+body {
+   font-family:  $font-content;
+   font-size: 16px;
+   color: $color-four;
+}
+
+/*header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    * {
+        z-index: 99;
+    }
+}
+
+.golden-logo {
+    width: 97px;
+    height: 42px;
+}
+
+@media (min-width: 960px) {
+    .golden-header-container {
+        height: $header-height;
+    }
+}
+
+/* header - navbar */
+@media (max-width: 991px) {
+    .golden-header-container .navbar-collapse {
+        background-color: rgba($color-one, 0.9);
+        padding: 5% 8%;
+    }
+}
+
+.golden-toggler-icon {
+    color: $color-two;
+}
+
+.golden-nav-link {
+    font-family:  $font-header;
+    color: $color-two;
+    &:hover, &:active, &:focus {
+        color: $color-three;
+    }
+}
+
+/* home -splash */
+#home {
+    background: url(../images/background_image.png);
+    color: $color-two;
+    h1 {
+        font-family: $font-header;
+        font-size: 4rem;
+        font-weight: 700;
+        @media (max-width: 575px) {
+            font-size: 2.6rem;
+        }
+        @media (min-width: 576px) and (max-width: 991px){
+            font-size: 3rem;
+        }
+    }
+    h2 {
+        font-style: italic;
+        font-size: 2rem;
+        @media (max-width: 575px) {
+            font-size: 1.6rem;
+        }
+        @media (min-width: 576px) and (max-width: 991px){
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.splash-wrapper {
+    padding-top: $header-height;
+    background-color: rgba($color-one, 0.5);
+    @media (min-width: 992px) {
+        height: $home-height;
+    }
+}
+
+.splash {
+    padding-bottom: 10vh;
+}
+
+.golden-btn-primary {
+    font-family: $font-header;
+    font-weight: 700;
+    color: $color-two;
+    background-color: $color-three;
+    padding: 15px 35px;
+    min-width: 240px;
+    &:hover {
+        color: inherit;
+        background-color: darken($color-three, 12%);
+    }
+}
+
+/* utilities */
+.golden-container {
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    h2 {
+        font-family: $font-header;
+        font-weight: 900;
+        color: $color-one;
+        font-size: 2.2rem;
+    }
+    h3 {
+        font-family: $font-header;
+        font-weight: 900;
+        color: $color-one;
+        font-size: 1.3rem;
+    }
+}
+
+/* services */
+.golden-services-card {
+    border: none;
+    max-width: 600px;
+    margin: 0 auto 4vh auto;
+}
+
+.golden-services-card-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid $color-three;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Portfolio */
+#portfolio {
+    background-color: $color-five;
+}
+
+.golden-portfolio-card {
+    border: none;
+    border-radius: 0;
+    margin: 0 auto 4vh auto;
+    max-width: 400px;
+    img {
+        object-fit: cover;
+    }
+}
+
+/* Footer */
+#footer {
+    font-family: $font-header;
+    color: $color-one;
+    font-weight: 600;
+    i {
+        background-color: $color-one;
+        color: $color-two;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}
